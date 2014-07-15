@@ -1,5 +1,0 @@
-AUT
-===
-
-Android application
-README!
