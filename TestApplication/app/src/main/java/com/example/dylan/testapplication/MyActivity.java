@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class MyActivity extends Activity {
@@ -57,6 +58,9 @@ public class MyActivity extends Activity {
 //            e.printStackTrace();
 //        }
         Button button = (Button) v;
-        button.setText("I was clicked!!!");
+        button.setText("you bitch!");
+
+        TextView myTextView = (TextView) findViewById(R.id.textView);
+        myTextView.setText("You're a big ol' bitch!");
     }
 }
