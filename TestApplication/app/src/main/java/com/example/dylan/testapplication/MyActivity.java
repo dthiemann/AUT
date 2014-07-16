@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MyActivity extends Activity {
@@ -32,5 +33,9 @@ public class MyActivity extends Activity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void buttonOnCLick(View v) {
+        // do something when button is clicked
     }
 }
