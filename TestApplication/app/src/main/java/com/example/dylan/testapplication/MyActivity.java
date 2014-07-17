@@ -7,7 +7,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+import android.media.AudioTrack;
+import android.media.AudioManager;
+import android.media.AudioFormat;
 
 public class MyActivity extends Activity {
 
@@ -38,25 +40,15 @@ public class MyActivity extends Activity {
     }
 
     public void buttonOnCLick(View v) {
-//        int[] notes = new int[]{60, 62, 64, 65, 67, 69, 71, 72, 72, 71, 69, 67, 65, 64, 62, 60};
-//        try {
-//            Synthesizer synthesizer = MidiSystem.getSynthesizer();
-//            synthesizer.open();
-//            MidiChannel channel = synthesizer.getChannels()[0];
-//
-//            for (int note : notes) {
-//                channel.noteOn(note, 50);
-//                try {
-//                    Thread.sleep(200);
-//                } catch (InterruptedException e) {
-//                    break;
-//                } finally {
-//                    channel.noteOff(note);
-//                }
-//            }
-//        } catch (MidiUnavailableException e) {
-//            e.printStackTrace();
-//        }
+        AudioTrack audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC, 44100, AudioFormat.CHANNEL_OUT_STEREO, AudioFormat.ENCODING_PCM_16BIT, 44100, AudioTrack.MODE_STREAM);
+
+        byte[] music1 = "888888888888888888".getBytes();
+
+        audioTrack.play();
+        for(int i = 0; i < 100; i++) {
+            audioTrack.write(music1, 0, music1.length);
+        }
+
         Button button = (Button) v;
         button.setText("you bitch!");
 
