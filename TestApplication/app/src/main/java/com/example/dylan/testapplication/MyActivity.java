@@ -62,6 +62,6 @@ public class MyActivity extends Activity {
 
         TextView myTextView = (TextView) findViewById(R.id.textView);
         myTextView.setText("You're a big ol' bitch!");
-        // look at these comments
+        // look at these comments asdfasdfadsf
     }
 }
